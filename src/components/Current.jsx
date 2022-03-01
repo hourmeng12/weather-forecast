@@ -93,7 +93,9 @@ const Temparature = () => {
             </Text>
           </Text>
         </Stack>
-        <Text casing="capitalize">{conditionText}</Text>
+        <Text minW="100px" textAlign="center" casing="capitalize">
+          {conditionText}
+        </Text>
       </Flex>
     </Box>
   );

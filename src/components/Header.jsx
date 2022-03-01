@@ -15,7 +15,7 @@ const Header = () => {
           Weather Forecast
         </Heading>
       </Show>
-      <Flex w={['full', 'auto']}>
+      <Flex w={['full', '55%']}>
         <SearchBar />
         <Button ml={2} variant="solid" onClick={toggleColorMode}>
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
