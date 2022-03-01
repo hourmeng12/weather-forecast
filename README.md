@@ -7,7 +7,7 @@ A Weather Forecast project buit with React, Chakra UI and [WeatherApi](https://w
 
 ### Live Demo
 
-https://react-weather-forecast.web.app/
+https://react-weather-fc.web.app/
 
 ### Screenshots
 
@@ -16,7 +16,7 @@ https://react-weather-forecast.web.app/
 
 ### Tools
 
-- React (Context Api)
+- React (Context Api & Hooks)
 - Chakra UI
 - Weather Api
 
@@ -28,7 +28,7 @@ git clone https://github.com/hourmeng12/weather-forecast
 npm install
 ```
 
-Sign up for [Weatherapi](https://www.weatherapi.com) and create .env.local file with api key.
+Sign up for [Weatherapi](https://www.weatherapi.com) and create `.env.local` file with api key.
 
 ```
 npm start / npm run build
