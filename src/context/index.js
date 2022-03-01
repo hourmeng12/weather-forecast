@@ -4,7 +4,9 @@ import { reducers } from '../state/reducers';
 import { actions } from '../state/actions';
 
 export const WeatherContext = createContext({
-  ...initialState,
+  state: initialState,
+  isCelsius: true,
+  setIsCelsius: () => {},
   getForecast: () => {},
 });
 
@@ -12,20 +14,17 @@ const WeatherProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducers, initialState);
   const [isCelsius, setIsCelsius] = useState(true);
 
-  const getForecast = async (coordinates = 'Phnom Penh') => {
+  const getForecast = async (destination = 'Phnom Penh') => {
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=781c4de229e44378bc541422222502&q=${coordinates}&days=3&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${destination}&days=3&aqi=no&alerts=no`
       );
-
       if (!response.ok) {
-        throw new Error('Something went wrong!');
+        throw new Error(response.statusText);
       }
 
       const data = await response.json();
-
       const { current, forecast, location } = data;
-
       dispatch({
         type: actions.setForecast,
         payload: {
@@ -34,9 +33,8 @@ const WeatherProvider = ({ children }) => {
           location: `${location.name}, ${location.region}`,
         },
       });
-      console.log(data);
     } catch (error) {
-      throw new Error(error);
+      console.log(`Error: ${error}`);
     }
   };
 
