@@ -25,9 +25,16 @@ const theme = extendTheme({
           color: 'brand.900',
           bg: 'brand.400',
           _hover: {
+            color: 'brand.900',
             bg: mode('brand.500', 'brand.300')(props),
           },
         }),
+        ghost: {
+          _hover: {
+            color: 'brand.900',
+            bg: 'brand.400',
+          },
+        },
         checked: (props) => ({
           borderRadius: 'none',
           border: '1px',
@@ -48,7 +55,7 @@ const theme = extendTheme({
           field: {
             _focus: {
               borderColor: 'brand.400',
-              boxShadow: '0 0 0 2px #ffebb3',
+              boxShadow: '0 0 0 1px #ffebb3',
             },
           },
         },
