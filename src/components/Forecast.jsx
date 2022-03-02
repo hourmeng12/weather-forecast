@@ -19,6 +19,8 @@ const Forecast = () => {
     isCelsius,
     state: { forecast },
   } = useContext(WeatherContext);
+
+  // Light mode | Dark mode style
   const bg = useColorModeValue('white', 'gray.700');
   const color = useColorModeValue('gray.600', 'gray.400');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
