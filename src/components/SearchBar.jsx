@@ -58,7 +58,7 @@ const SearchBar = () => {
   );
 
   return (
-    <Stack direction="column">
+    <Stack direction="column" w="full">
       <AutoComplete
         rollNavigation
         maxSuggestions={5}
