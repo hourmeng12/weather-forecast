@@ -14,7 +14,7 @@ const WeatherProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducers, initialState);
   const [isCelsius, setIsCelsius] = useState(true);
 
-  const getForecast = async (destination = 'Phnom Penh') => {
+  const getForecast = async (destination = 'auto:ip') => {
     try {
       const response = await fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${destination}&days=3&aqi=no&alerts=no`
