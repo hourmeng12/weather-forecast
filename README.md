@@ -3,7 +3,7 @@
 ![React](https://img.shields.io/badge/React-18181b?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![ChakraUI](https://img.shields.io/badge/ChakraUI-319795?style=for-the-badge&logo=Chakra-ui&logoColor=white)
 
-A Weather Forecast project buit with React, Chakra UI and [WeatherApi](https://www.weatherapi.com). Get the weather forecast with smart layout. View wind, precipitation, humidity and tempature upto 3 days forecast. Search through cities or states worldwide accurate realtime.
+A Weather Forecast project built with React, Chakra UI and [WeatherApi](https://www.weatherapi.com). Get the weather forecast with smart layout. View wind, precipitation, humidity and temperature up to 3 days forecast. Search through cities or states worldwide accurate realtime.
 
 ### Live Demo
 
